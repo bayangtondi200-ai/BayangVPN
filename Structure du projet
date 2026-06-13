@@ -1,0 +1,14 @@
+securetunnel-vpn/
+│── backend/
+│   ├── server.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── vpn.js
+│   ├── models/
+│   │   ├── User.js
+│   ├── config/
+│   │   ├── db.js
+│── frontend/
+│   ├── src/
+│   │   ├── App.js
+│── README.md
