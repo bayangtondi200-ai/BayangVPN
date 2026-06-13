@@ -1,0 +1,18 @@
+const fs = require("fs");
+
+function generateVPNConfig(user) {
+  const config = `
+[Interface]
+PrivateKey = USER_PRIVATE_KEY
+Address = 10.0.0.2/24
+
+[Peer]
+PublicKey = SERVER_PUBLIC_KEY
+Endpoint = vpn.securetunnel.com:51820
+AllowedIPs = 0.0.0.0/0
+`;
+
+  fs.writeFileSync(`configs/${user}.conf`, config);
+}
+
+module.exports = generateVPNConfig;
